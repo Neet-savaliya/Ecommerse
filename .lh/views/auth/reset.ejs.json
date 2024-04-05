@@ -1,0 +1,18 @@
+{
+    "sourceFile": "views/auth/reset.ejs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1712331240108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1712331240108,
+            "name": "Commit-0",
+            "content": "<%- include('../includes/head.ejs') %>\r\n    <link rel=\"stylesheet\" href=\"/css/forms.css\">\r\n    <link rel=\"stylesheet\" href=\"/css/auth.css\">\r\n</head>\r\n\r\n<body>\r\n   <%- include('../includes/navigation.ejs') %>\r\n\r\n    <main>\r\n        <% if(errorMsg) { %>\r\n            <div class=\"user-message user-message--error\"><%= errorMsg %></div>\r\n            <% } %>\r\n        <form class=\"login-form\" action=\"/reset\" method=\"POST\">\r\n            <div class=\"form-control\">\r\n                <label for=\"email\">E-Mail</label>\r\n                <input type=\"email\" name=\"email\" id=\"email\">\r\n            </div>\r\n            <input type=\"hidden\" name=\"_csrf\" value=\"<%= csrfToken %>\">\r\n            <button class=\"btn\" type=\"submit\">Submit</button>\r\n        </form>\r\n    </main>\r\n<%- include('../includes/end.ejs') %>"
+        }
+    ]
+}

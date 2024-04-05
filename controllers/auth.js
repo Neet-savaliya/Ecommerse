@@ -62,7 +62,7 @@ exports.getReset = (req, res, next) => {
     res.render("auth/reset", {
         path: "/reset",
         pageTitle: "Reset Password",
-        errorMsg: message,
+        errorMsg: message
     });
 };
 
@@ -138,9 +138,9 @@ exports.postSignup = (req, res, next) => {
         .sendMail({
             from: '"Code marshals" <davin32@ethereal.email>', // sender address
             to: email, // list of receivers
-            subject: "Testing mail", // Subject line
-            text: "This is first mail", // plain text body
-            html: "<b>Please consider mail</b>", // html body
+            subject: "Welcome mail", // Subject line
+            text: "Thanks for visiting our side", // plain text body
+            html: "<b>Please report if find any error</b>", // html body
         })
         .then((data) => {
             console.log("email sending data", data.messageId);
