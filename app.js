@@ -5,14 +5,14 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const csrf = require("csurf");
-const flash = require("connect-flash")
+const flash = require("connect-flash");
 
 const errorController = require("./controllers/error");
 const User = require("./models/user");
 
 const MONGODB_URI =
     "mongodb+srv://node_complete:2801@cluster0.5zm0eog.mongodb.net/shop";
-    // "mongodb://localhost:27017/shop"
+// "mongodb://localhost:27017/shop"
 
 const app = express();
 const store = new MongoDBStore({
@@ -39,7 +39,7 @@ app.use(
     })
 );
 app.use(csrfProtection);
-app.use(flash())
+app.use(flash());
 
 app.use((req, res, next) => {
     if (!req.session.user) {
@@ -47,16 +47,21 @@ app.use((req, res, next) => {
     }
     User.findById(req.session.user._id)
         .then((user) => {
+            if (!user) {
+                return next();
+            }
             req.user = user;
             next();
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            throw new Error(err);
+        });
 });
 
 app.use((req, res, next) => {
-  res.locals.isAuthenticated = req.session.isLoggedIn
-  res.locals.csrfToken = req.csrfToken()
-  next()
+    res.locals.isAuthenticated = req.session.isLoggedIn;
+    res.locals.csrfToken = req.csrfToken();
+    next();
 });
 
 app.use("/admin", adminRoutes);
