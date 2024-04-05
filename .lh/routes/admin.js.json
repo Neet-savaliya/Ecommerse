@@ -1,0 +1,62 @@
+{
+    "sourceFile": "routes/admin.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1712237221652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712237227795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ \n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237235677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ \n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237244887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ઢ()ઞ\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237250727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ઢાંજીાેેઞ\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237258761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ેઞ\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237264520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ઢાઞ\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237271995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ \n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237284888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ઢમપામકઞ\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237290408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ઢમપામકઞ ૃ ીાૌહગીા\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1712237304845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const path = require(\"path\");\n const express = require(\"express\");\n-મદલેૂ ઢમપામકઞ ૃ ીાૌહગીા(ઠઠ)\n+મદલેૂ ઢમપામકઞ ૃ ીાૌહગીા(ઠાંજીાેે-ઠ)\n \n const adminController = require(\"../controllers/admin\");\n const isAuth = require(\"../middleware/is-auth\");\n \n"
+                },
+                {
+                    "date": 1712237321981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+const path = require(\"path\");\n+const express = require(\"express\");\n+મદલેૂ ઢમપામકઞ ૃ ીાૌહગીા(ઠાંજીાેે-નોતગ્ોૂગદલઠ)\n+\n+const adminController = require(\"../controllers/admin\");\n+const isAuth = require(\"../middleware/is-auth\");\n+\n+const router = express.Router();\n+\n+// /admin/add-product => GET\n+router.get(\"/add-product\", isAuth, adminController.getAddProduct);\n+\n+// /admin/products => GET\n+router.get(\"/products\", isAuth, adminController.getProducts);\n+\n+// /admin/add-product => POST\n+router.post(\"/add-product\", isAuth, adminController.postAddProduct);\n+\n+router.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n+\n+router.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n+\n+router.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n+\n+module.exports = router;\n"
+                }
+            ],
+            "date": 1712237221652,
+            "name": "Commit-0",
+            "content": "const path = require(\"path\");\nconst express = require(\"express\");\n\nconst adminController = require(\"../controllers/admin\");\nconst isAuth = require(\"../middleware/is-auth\");\n\nconst router = express.Router();\n\n// /admin/add-product => GET\nrouter.get(\"/add-product\", isAuth, adminController.getAddProduct);\n\n// /admin/products => GET\nrouter.get(\"/products\", isAuth, adminController.getProducts);\n\n// /admin/add-product => POST\nrouter.post(\"/add-product\", isAuth, adminController.postAddProduct);\n\nrouter.get(\"/edit-product/:productId\", isAuth, adminController.getEditProduct);\n\nrouter.post(\"/edit-product\", isAuth, adminController.postEditProduct);\n\nrouter.post(\"/delete-product\", isAuth, adminController.postDeleteProduct);\n\nmodule.exports = router;\n"
+        }
+    ]
+}

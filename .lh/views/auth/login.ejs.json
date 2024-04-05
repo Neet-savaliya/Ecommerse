@@ -1,0 +1,34 @@
+{
+    "sourceFile": "views/auth/login.ejs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1712226678265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712227890771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             <% } %>\n         <form class=\"login-form\" action=\"/login\" method=\"POST\" novalidate>\n             <div class=\"form-control\">\n                 <label for=\"email\">E-Mail</label>\n-                <input type=\"email\" name=\"email\" id=\"email\">\n+                <input type=\"email\" name=\"email\" id=\"email\" value=\"\">\n             </div>\n             <div class=\"form-control\">\n                 <label for=\"password\">Password</label>\n                 <input type=\"password\" name=\"password\" id=\"password\">\n"
+                },
+                {
+                    "date": 1712227897576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+<%- include('../includes/head.ejs') %>\n+    <link rel=\"stylesheet\" href=\"/css/forms.css\">\n+    <link rel=\"stylesheet\" href=\"/css/auth.css\">\n+</head>\n+\n+<body>\n+   <%- include('../includes/navigation.ejs') %>\n+\n+    <main>\n+        <% if(errorMsg) { %>\n+            <div class=\"user-message user-message--error\"><%= errorMsg %></div>\n+            <% } %>\n+        <form class=\"login-form\" action=\"/login\" method=\"POST\" novalidate>\n+            <div class=\"form-control\">\n+                <label for=\"email\">E-Mail</label>\n+                <input type=\"email\" name=\"email\" id=\"email\" value=\"<%=  %>\">\n+            </div>\n+            <div class=\"form-control\">\n+                <label for=\"password\">Password</label>\n+                <input type=\"password\" name=\"password\" id=\"password\">\n+            </div>\n+            <input type=\"hidden\" name=\"_csrf\" value=\"<%= csrfToken %>\">\n+            <button class=\"btn\" type=\"submit\">Login</button>\n+        </form>\n+        <div class=\"centered\">\n+            <a href=\"/reset\">Forgot Password?</a>\n+        </div>\n+    </main>\n+<%- include('../includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712227907795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n         <div class=\"centered\">\n             <a href=\"/reset\">Forgot Password?</a>\n         </div>\n     </main>\n-<%- include('../includes/end.\n\\ No newline at end of file\n+<%- include('../includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712227954149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+<%- include('../includes/head.ejs') %>\n+    <link rel=\"stylesheet\" href=\"/css/forms.css\">\n+    <link rel=\"stylesheet\" href=\"/css/auth.css\">\n+</head>\n+\n+<body>\n+   <%- include('../includes/navigation.ejs') %>\n+\n+    <main>\n+        <% if(errorMsg) { %>\n+            <div class=\"user-message user-message--error\"><%= errorMsg %></div>\n+            <% } %>\n+        <form class=\"login-form\" action=\"/login\" method=\"POST\" novalidate>\n+            <div class=\"form-control\">\n+                <label for=\"email\">E-Mail</label>\n+                <input type=\"email\" name=\"email\" id=\"email\" value=\"<%= oldData.email %>\">\n+            </div>\n+            <div class=\"form-control\">\n+                <label for=\"password\">Password</label>\n+                <input type=\"password\" name=\"password\" id=\"password\">\n+            </div>\n+            <input type=\"hidden\" name=\"_csrf\" value=\"<%= csrfToken %>\">\n+            <button class=\"btn\" type=\"submit\">Login</button>\n+        </form>\n+        <div class=\"centered\">\n+            <a href=\"/reset\">Forgot Password?</a>\n+        </div>\n+    </main>\n+<%- include('../includes/end.ejs') %>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712226678265,
+            "name": "Commit-0",
+            "content": "<%- include('../includes/head.ejs') %>\n    <link rel=\"stylesheet\" href=\"/css/forms.css\">\n    <link rel=\"stylesheet\" href=\"/css/auth.css\">\n</head>\n\n<body>\n   <%- include('../includes/navigation.ejs') %>\n\n    <main>\n        <% if(errorMsg) { %>\n            <div class=\"user-message user-message--error\"><%= errorMsg %></div>\n            <% } %>\n        <form class=\"login-form\" action=\"/login\" method=\"POST\" novalidate>\n            <div class=\"form-control\">\n                <label for=\"email\">E-Mail</label>\n                <input type=\"email\" name=\"email\" id=\"email\">\n            </div>\n            <div class=\"form-control\">\n                <label for=\"password\">Password</label>\n                <input type=\"password\" name=\"password\" id=\"password\">\n            </div>\n            <input type=\"hidden\" name=\"_csrf\" value=\"<%= csrfToken %>\">\n            <button class=\"btn\" type=\"submit\">Login</button>\n        </form>\n        <div class=\"centered\">\n            <a href=\"/reset\">Forgot Password?</a>\n        </div>\n    </main>\n<%- include('../includes/end.ejs') %>"
+        }
+    ]
+}

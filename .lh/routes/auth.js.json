@@ -1,0 +1,30 @@
+{
+    "sourceFile": "routes/auth.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1712142480241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712142487845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+const express = require('express');\n+const {check }= req \n+\n+const authController = require('../controllers/auth');\n+\n+const router = express.Router();\n+\n+router.get('/login', authController.getLogin);\n+\n+router.get('/signup', authController.getSignup);\n+\n+router.get(\"/reset\" , authController.getReset);\n+\n+router.get(\"/reset/:token\" , authController.getResetPassword);\n+\n+router.post('/login', authController.postLogin);\n+\n+router.post('/signup', authController.postSignup);\n+\n+router.post('/logout', authController.postLogout);\n+\n+router.post(\"/reset\", authController.postReset);\n+\n+router.post(\"/new-password\", authController.postResetPassword);\n+\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712142495876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const express = require('express');\n-const {check }= require() \n+const {check }= require(\"express\") \n \n const authController = require('../controllers/auth');\n \n const router = express.Router();\n"
+                },
+                {
+                    "date": 1712142503931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+const express = require('express');\n+const {check }= require(\"express-validator/declarations/\") \n+\n+const authController = require('../controllers/auth');\n+\n+const router = express.Router();\n+\n+router.get('/login', authController.getLogin);\n+\n+router.get('/signup', authController.getSignup);\n+\n+router.get(\"/reset\" , authController.getReset);\n+\n+router.get(\"/reset/:token\" , authController.getResetPassword);\n+\n+router.post('/login', authController.postLogin);\n+\n+router.post('/signup', authController.postSignup);\n+\n+router.post('/logout', authController.postLogout);\n+\n+router.post(\"/reset\", authController.postReset);\n+\n+router.post(\"/new-password\", authController.postResetPassword);\n+\n+module.exports = router;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712142480241,
+            "name": "Commit-0",
+            "content": "const express = require('express');\nconst {}\n\nconst authController = require('../controllers/auth');\n\nconst router = express.Router();\n\nrouter.get('/login', authController.getLogin);\n\nrouter.get('/signup', authController.getSignup);\n\nrouter.get(\"/reset\" , authController.getReset);\n\nrouter.get(\"/reset/:token\" , authController.getResetPassword);\n\nrouter.post('/login', authController.postLogin);\n\nrouter.post('/signup', authController.postSignup);\n\nrouter.post('/logout', authController.postLogout);\n\nrouter.post(\"/reset\", authController.postReset);\n\nrouter.post(\"/new-password\", authController.postResetPassword);\n\nmodule.exports = router;"
+        }
+    ]
+}
