@@ -47,13 +47,13 @@ exports.postAddProduct = (req, res, next) => {
     product
         .save()
         .then((result) => {
-            // console.log(result);
-            console.log("Created Product");
             req.flash("success", "Product added successfully");
             res.redirect("/admin/products");
         })
         .catch((err) => {
-            console.log(err);
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
         });
 };
 
@@ -78,7 +78,11 @@ exports.getEditProduct = (req, res, next) => {
                 error: [],
             });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 };
 
 exports.postEditProduct = (req, res, next) => {
@@ -100,7 +104,7 @@ exports.postEditProduct = (req, res, next) => {
                 imageUrl: updatedImageUrl,
                 price: updatedPrice,
                 description: updatedDesc,
-                _id : prodId
+                _id: prodId,
             },
             errorMsg: error.errors[0].msg,
             error: error.errors,
@@ -109,6 +113,7 @@ exports.postEditProduct = (req, res, next) => {
 
     Product.findById(prodId)
         .then((product) => {
+            throw new Error("dummy error")
             if (product.userId.toString() === req.user._id.toString()) {
                 product.title = updatedTitle;
                 product.price = updatedPrice;
@@ -119,11 +124,14 @@ exports.postEditProduct = (req, res, next) => {
             return false;
         })
         .then((result) => {
-            console.log("UPDATED PRODUCT!");
             req.flash("success", "Product Edited successfully.");
             res.redirect("/admin/products");
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(error)
+        });
 };
 
 exports.getProducts = (req, res, next) => {
@@ -142,16 +150,23 @@ exports.getProducts = (req, res, next) => {
                 successMsg: message,
             });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 };
 
 exports.postDeleteProduct = (req, res, next) => {
     const prodId = req.body.productId;
     Product.deleteOne({ _id: prodId, userId: req.user._id })
         .then(() => {
-            console.log("DESTROYED PRODUCT");
             req.flash("success", "Product Deleted successfully.");
             res.redirect("/admin/products");
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 };

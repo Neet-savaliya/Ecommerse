@@ -1,0 +1,42 @@
+{
+    "sourceFile": "views/500.ejs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1712333864222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712333871423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n </head>\r\n \r\n <body>\r\n     <%- include('includes/navigation.ejs') %>\r\n-    <h1>Page Not Found!</h1>\r\n+    <h1>Sorry </h1>\r\n \r\n <%- include('includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712333877478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+<%- include('includes/head.ejs') %>\r\n+</head>\r\n+\r\n+<body>\r\n+    <%- include('includes/navigation.ejs') %>\r\n+    <h1>Sorry! </h1>\r\n+\r\n+<%- include('includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712333884181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+<%- include('includes/head.ejs') %>\r\n+</head>\r\n+\r\n+<body>\r\n+    <%- include('includes/navigation.ejs') %>\r\n+    <h1>Sorry!, We have some  </h1>\r\n+\r\n+<%- include('includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712333895204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+<%- include('includes/head.ejs') %>\r\n+</head>\r\n+\r\n+<body>\r\n+    <%- include('includes/navigation.ejs') %>\r\n+    <h1>Sorry!, We have some error here </h1>\r\n+    <p></p>\r\n+\r\n+<%- include('includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712333908333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+<%- include('includes/head.ejs') %>\r\n+</head>\r\n+\r\n+<body>\r\n+    <%- include('includes/navigation.ejs') %>\r\n+    <h1>Sorry!, We have some error here </h1>\r\n+    <p>Our team will ensure this error will </p>\r\n+\r\n+<%- include('includes/end.ejs') %>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712333916364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+<%- include('includes/head.ejs') %>\r\n+</head>\r\n+\r\n+<body>\r\n+    <%- include('includes/navigation.ejs') %>\r\n+    <h1>Sorry!, We have some error here </h1>\r\n+    <p>Our team will ensure this error will resolve in few timw</p>\r\n+\r\n+<%- include('includes/end.ejs') %>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712333864222,
+            "name": "Commit-0",
+            "content": "<%- include('includes/head.ejs') %>\r\n</head>\r\n\r\n<body>\r\n    <%- include('includes/navigation.ejs') %>\r\n    <h1>Page Not Found!</h1>\r\n\r\n<%- include('includes/end.ejs') %>"
+        }
+    ]
+}

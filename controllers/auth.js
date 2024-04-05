@@ -62,7 +62,7 @@ exports.getReset = (req, res, next) => {
     res.render("auth/reset", {
         path: "/reset",
         pageTitle: "Reset Password",
-        errorMsg: message
+        errorMsg: message,
     });
 };
 
@@ -85,7 +85,11 @@ exports.getResetPassword = (req, res, next) => {
                 });
             }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 };
 
 exports.postLogin = (req, res, next) => {
@@ -127,7 +131,11 @@ exports.postLogin = (req, res, next) => {
                 res.redirect("/login");
             }
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 };
 
 exports.postSignup = (req, res, next) => {
@@ -142,10 +150,12 @@ exports.postSignup = (req, res, next) => {
             text: "Thanks for visiting our side", // plain text body
             html: "<b>Please report if find any error</b>", // html body
         })
-        .then((data) => {
-            console.log("email sending data", data.messageId);
-        })
-        .catch((err) => console.log(err));
+        .then((data) => {})
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 
     const error = validationResult(req);
     if (!error.isEmpty()) {
@@ -172,7 +182,11 @@ exports.postSignup = (req, res, next) => {
         .then((data) => {
             res.redirect("/login");
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            const error = new Error("Product not fetched!");
+            error.httpStatusCode = 500;
+            next(err)
+        });
 };
 
 exports.postLogout = (req, res, next) => {
@@ -216,10 +230,12 @@ exports.postReset = (req, res, next) => {
             `, // html body
                 });
             })
-            .then((data) => {
-                console.log("email sending data", data.messageId);
-            })
-            .catch((err) => console.log(err));
+            .then((data) => {})
+            .catch((err) => {
+                const error = new Error("Product not fetched!");
+                error.httpStatusCode = 500;
+                next(err)
+            });
     });
 };
 
@@ -239,7 +255,11 @@ exports.postResetPassword = (req, res, next) => {
                 req.flash("errorMsg", "Password changed");
                 res.redirect("/login");
             })
-            .catch((err) => console.log(err));
+            .catch((err) => {
+                const error = new Error("Product not fetched!");
+                error.httpStatusCode = 500;
+                next(err)
+            });
     } else {
         req.flash("passNotMatchErr", "Both password must be same.");
         res.redirect("/reset/:token");

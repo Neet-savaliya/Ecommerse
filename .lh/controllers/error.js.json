@@ -1,0 +1,26 @@
+{
+    "sourceFile": "controllers/error.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1712333928682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712333943003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n     isAuthenticated: req.session.isLoggedIn\n   });\n };\n \n-exports.gte500 = (req ,res ,next)\n+exports.gte500 = (req ,res ,next )\n"
+                },
+                {
+                    "date": 1712333950523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+exports.get404 = (req, res, next) => {\n+  res.status(404).render('404', {\n+    pageTitle: 'Page Not Found',\n+    path: '/404',\n+    isAuthenticated: req.session.isLoggedIn\n+  });\n+};\n+\n+exports.gte500 = (req ,res ,next) => {\n+  re\n+}\n"
+                }
+            ],
+            "date": 1712333928681,
+            "name": "Commit-0",
+            "content": "exports.get404 = (req, res, next) => {\n  res.status(404).render('404', {\n    pageTitle: 'Page Not Found',\n    path: '/404',\n    isAuthenticated: req.session.isLoggedIn\n  });\n};\n\nexp\n"
+        }
+    ]
+}
